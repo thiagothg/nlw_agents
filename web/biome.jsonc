@@ -1,0 +1,16 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+  "extends": [
+    "ultracite"
+  ],
+  "javascript": {
+
+    "formatter": {
+      "lineWidth": 120,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineEnding": "lf",
+      "semicolons": "asNeeded"
+    }
+  }
+}
