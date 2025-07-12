@@ -1,6 +1,6 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 import { CreateRoom } from "./pages/create-room";
 import { Room } from "./pages/room";
 
@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<CreateRoom />} index />
-          <Route path="/rooms/:id" element={<Room />} />
+          <Route path="/rooms/:roomId" element={<Room />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
