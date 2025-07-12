@@ -1,9 +1,0 @@
-@base_url = http://localhost:3333
-
-# health check
-GET {{base_url}}/health
-
-###
-
-# Get all rooms
-GET {{base_url}}/rooms

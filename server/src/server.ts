@@ -6,8 +6,10 @@ import {
 } from "fastify-type-provider-zod";
 import { fastifyCors } from "@fastify/cors";
 import { env } from "./env.ts";
-import { sql } from "./db/connection.ts";
 import { getRoomsRoute } from "./http/routes/get-rooms.ts";
+import { createRoomRoute } from "./http/routes/create-room.ts";
+import { getRoomQuetionsRoute } from "./http/routes/get-room-questions.ts";
+import { createRoomQuestionRoute } from "./http/routes/create-question.ts";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -27,6 +29,9 @@ app.get("/health", () => {
 });
 
 app.register(getRoomsRoute);
+app.register(createRoomRoute);
+app.register(getRoomQuetionsRoute);
+app.register(createRoomQuestionRoute);
 
 app.listen({ port: env.PORT }, (err, address) => {
     console.log(`Server is running on ${address}`);
