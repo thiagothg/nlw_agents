@@ -15,6 +15,13 @@
       "when": 1752198376204,
       "tag": "0001_rare_sebastian_shaw",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752352517219,
+      "tag": "0002_purple_bloodstorm",
+      "breakpoints": true
     }
   ]
 }

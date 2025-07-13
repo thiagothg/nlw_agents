@@ -1,20 +1,20 @@
-@base_url = http://localhost:3333
+@baseUrl = http://localhost:3333
 
 # health check
 # @name healthCheck
-GET {{base_url}}/health
+GET {{baseUrl}}/health
 
 ###
 
 # Get all rooms
 #@name getRooms
-GET {{base_url}}/rooms
+GET {{baseUrl}}/rooms
 
 ###
 
 # Create a room
 # @name createRoom
-POST {{base_url}}/rooms
+POST {{baseUrl}}/rooms
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ Content-Type: application/json
 
 # Create a question
 # @name createQuestion
-POST {{base_url}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/{{roomId}}/questions
 Content-Type: application/json
 
 {
@@ -41,8 +41,16 @@ Content-Type: application/json
 ###
 # Get questions for a room
 #@name getRoomQuestions
-GET {{base_url}}/rooms/{{roomId}}/questions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 ###
 
+# Create question
+# @name createQuestion
+POST {{baseUrl}}/rooms/6f05315b-1442-4bfa-af46-cf39d951f59e/questions
+Content-Type: application/json
+
+{
+  "question": "O que é Vue.js e a sua diferença em relação ao Angular?"
+}
 
